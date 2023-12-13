@@ -1,3 +1,3 @@
 # ae-ano-detection
 
-_Check the [related documentation](https://swiss-ai-center.github.io/swiss-ai-center/reference/ae-ano-detection) for more information._
+_Check the [related documentation](https://docs.swiss-ai-center.ch/reference/ae-ano-detection) for more information._
