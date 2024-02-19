@@ -62,7 +62,8 @@ class MyService(Service):
                     acronym=ExecutionUnitTagAcronym.TIME_SERIES
                 ),
             ],
-            has_ai=True
+            has_ai=True,
+            docs_url="https://docs.swiss-ai-center.ch/reference/services/ae-ano-detection/",
         )
         self._model = tf.keras.models.load_model(os.path.join(os.path.dirname(__file__), "..", "ae_model.h5"))
         self._logger = get_logger(settings)
