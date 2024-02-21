@@ -1,6 +1,5 @@
 services:
   service:
-    container_name: ae-ano-detection-service
     build:
       context: .
       dockerfile: development.Dockerfile
