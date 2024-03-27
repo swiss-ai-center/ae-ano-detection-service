@@ -71,7 +71,7 @@ jobs:
     if: ${{ vars.RUN_CICD == 'true' }}
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Lint Python app
         uses: swiss-ai-center/common-code/.github/actions/lint-python-app@main
@@ -84,7 +84,7 @@ jobs:
     if: ${{ vars.RUN_CICD == 'true' }}
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Run ML experiment with DVC
         uses: swiss-ai-center/common-code/.github/actions/run-ml-experiment-with-dvc@main
@@ -94,7 +94,7 @@ jobs:
           s3-secret-access-key: ${{ env.S3_SECRET_ACCESS_KEY }}
 
       - name: Upload model
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: model
           path: ${{ env.MODEL_PATH }}
@@ -106,10 +106,10 @@ jobs:
     if: ${{ vars.RUN_CICD == 'true' }}
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download model
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: model
           path: ./model-serving
@@ -126,10 +126,10 @@ jobs:
     if: ${{ vars.RUN_CICD == 'true' && success() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/prod') && (vars.DEPLOY_DEV == 'true' || vars.DEPLOY_PROD == 'true') }}
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download model
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: model
           path: ./model-serving
@@ -151,7 +151,7 @@ jobs:
     if: ${{ vars.RUN_CICD == 'true' && success() && github.ref == 'refs/heads/main' && vars.DEPLOY_DEV == 'true' }}
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Get service Docker image SHA tag
         shell: bash
@@ -193,7 +193,7 @@ jobs:
     if: ${{ vars.RUN_CICD == 'true' && success() && github.ref == 'refs/heads/prod' && vars.DEPLOY_PROD == 'true' }}
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Get service Docker image SHA tag
         shell: bash
