@@ -177,7 +177,7 @@ jobs:
       - name: Remove unnecessary keys from configuration files
         uses: swiss-ai-center/common-code/.github/actions/remove-unnecessary-keys-from-kubernetes-configuration-files@main
         with:
-          configuration-files-location: ./kubernetes
+          configuration-files-location: ./model-serving/kubernetes
 
       - name: Deploy service on the Kubernetes cluster
         uses: swiss-ai-center/common-code/.github/actions/execute-command-on-kubernetes-cluster@main
