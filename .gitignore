@@ -12,14 +12,15 @@ __pycache__/
 
 # Pytest Coverage
 .coverage
-coverage.xml
 
 ## IntelliJ's IDEs
+
 .idea
 
 ## Visual Studio Code
+
 .vscode
 
 ## macOS
-.DS_Store
 
+.DS_Store
