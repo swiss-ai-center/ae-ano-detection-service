@@ -5,7 +5,7 @@ version = "1.0.0"
 requires-python = "==3.10.*"
 dependencies = [
     "common-code[test] @ git+https://github.com/swiss-ai-center/common-code.git@main",
-    "dvc[s3]==3.49.0",
+    "dvc[s3]==3.67.0",
     "flake8==7.0.0",
     "matplotlib==3.8.3",
     "numpy==1.26.4",
