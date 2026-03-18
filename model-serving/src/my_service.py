@@ -11,6 +11,7 @@ from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
 import io
+import os
 
 api_description = """
 Anomaly detection of a time series with an autoencoder.
