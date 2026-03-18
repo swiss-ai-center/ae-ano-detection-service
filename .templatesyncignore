@@ -1,0 +1,10 @@
+model-serving/src/my_service.py
+README.md
+model-serving/README.md
+model-serving/requirements.txt
+model-serving/pyproject.toml
+model-serving/.gitignore
+model-serving/Dockerfile
+model-serving/development.Dockerfile
+model-serving/kubernetes/stateful.yml
+model-serving/docker-compose.yml
